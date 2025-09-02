@@ -1,0 +1,238 @@
+@media (max-width:1980px) {
+
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+    a:focus,
+    button:focus {
+        outline: 3px solid #4A4AFF;
+        outline-offset: 2px;
+    }
+
+    /* Navigation */
+    #menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        transition: background 0.3s ease;
+    }
+
+    #menu.transparent {
+        background: transparent;
+        color: white;
+    }
+
+    #menu.solid {
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-container {
+        max-width: 1980px;
+        margin: 0 auto;
+        padding: 15px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #00000040;
+    }
+
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .menu-links {
+        list-style: none;
+        display: flex;
+        gap: 70px;
+    }
+
+    .menu-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: inherit;
+        position: relative;
+        padding-bottom: 4px;
+        /* espaço para a linha */
+        transition: color 0.3s;
+    }
+
+    /* Linha abaixo do link quando ativo ou ao passar o mouse */
+    .menu-links a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        /* espessura da linha */
+        left: 0;
+        bottom: 0;
+        background-color: #1d1d1d;
+        /* cor da linha */
+        transition: width 0.3s ease;
+    }
+
+    /* Ao passar o mouse */
+    .menu-links a:hover::after {
+        width: 100%;
+    }
+
+    /* Banner */
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .banner-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    #particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .title-banner {
+        font-size: 700%;
+    }
+
+    .title-banner-b {
+        font-size: 600%;
+    }
+
+    .subtitle-banner {
+        font-size: 400%;
+    }
+
+    .banner-content {
+        margin-left: 60%;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        color: white;
+        padding: 1rem;
+    }
+
+    .banner-content p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        width: 11%;
+        height: 11%;
+        display: inline-block;
+        padding: 0.75rem 1rem;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+        color: #4073ff;
+    }
+
+    /* Sections */
+    .section-main {
+        padding: 80px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    section h2 {
+        margin-bottom: 20px;
+    }
+
+    .content-title{
+        color: #4A4AFF;
+        font-weight: 800;
+        font-size: 300%;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+    }
+
+    .project-title{
+        font-size: 150%;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background: #f1f1f1;
+        color: #555;
+    }
+}
+
+/* Responsividade */
+@media (max-width:768px) {
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .menu-links {
+        gap: 10px;
+    }
+}
+
+@media (max-width:480px) {
+    #menu .menu-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,20 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Lais Amano</title>
+    <title>Lais Amano | Web Developer & Designer</title>
+    <meta name="description"
+        content="Portfolio of Lais Amano, Web Developer and Designer. Showcasing projects in web design, development, and digital experiences.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<header>
-    
-</header>
-
 <body>
+    <!-- Navigation -->
+    <header>
+        <nav id="menu" aria-label="Main Navigation">
+            <div class="menu-container">
+                <a href="#banner" class="logo">Lais Miharu Amano</a>
+                <ul class="menu-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Banner Section -->
+    <section id="banner" class="banner" aria-label="Hero Section">
+        <img src="img/banner-desk.png" alt="Photo of Lais" class="banner-img">
+        <canvas id="particles" aria-hidden="true"></canvas>
+        <div class="banner-content">
+            <h1 class="title-banner">Hello,</h1>
+            <h2 class="title-banner-b">I'm Lais</h2>
+            <p class="subtitle-banner">Web Design Student & Developer</p>
+            <div class="btn-group">
+                <a href="mailto:amano.lais90@gmail.com" class="btn" aria-label="Send Email">
+                    <!-- Email Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
+                    </svg>
+
+                </a>
+
+                <a href="https://github.com/LaisAmano" target="_blank" rel="noopener" class="btn"
+                    aria-label="Visit GitHub profile">
+                    <!-- GitHub Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank" rel="noopener" class="btn"
+                    aria-label="Visit LinkedIn profile">
+                    <!-- LinkedIn Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section class="section-main" id="about">
+            <h2 class="content-title">About Me</h2>
+            <p>Hello! I'm Lais Amano, a designer and web developer passionate about transforming ideas into unique
+                digital experiences. I focus on creating projects that combine aesthetics, functionality, and
+                innovation, always paying close attention to the user experience. Every challenge is an opportunity to
+                learn, innovate, and deliver real results.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section-main" id="projects">
+            <h2 class="content-title">Featured Projects</h2>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3 class="project-title">Como que faz (TCC)</h3>
+                    <br>
+                    <p class="project-subtitle">Web platform for tips and questions about cooking, cleaning, and well-being. Technologies used:
+                        HTML, CSS, JavaScript, MySQL.</p>
+                    <img src="img/tcc.webp" alt="TCC Como que faz project screenshot" class="project-img">
+                    </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-main" id="contact">
+            <h2 class="content-title">Let's Talk 🚀</h2>
+            <p>Feel free to get in touch via email or connect on GitHub and LinkedIn.</p>
+            <div class="btn-group">
+                <a href="mailto:amano.lais90@gmail.com" class="btn" aria-label="Send Email">
+                    <!-- Email Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
+                    </svg>
+
+                </a>
+
+                <a href="https://github.com/LaisAmano" target="_blank" rel="noopener" class="btn"
+                    aria-label="Visit GitHub profile">
+                    <!-- GitHub Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank" rel="noopener" class="btn"
+                    aria-label="Visit LinkedIn profile">
+                    <!-- LinkedIn Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
+                    </svg>
+
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 - Developed by Lais Amano</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
-<footer>
-
-</footer>
 </html>
