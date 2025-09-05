@@ -11,11 +11,10 @@
 </head>
 
 <body>
-    <!-- Navigation -->
     <header>
         <nav id="menu" aria-label="Main Navigation">
             <div class="menu-container">
-                <a href="#banner" class="logo">Lais Miharu Amano - RM566675</a>
+                <a href="#banner-mob" class="logo">Lais Miharu Amano - RM566675</a>
 
                 <!-- Botão Hamburger Mobile -->
                 <button class="hamburger" aria-label="Toggle Menu">
@@ -25,137 +24,264 @@
                 </button>
 
                 <ul class="menu-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about-mob">About</a></li>
+                    <li><a href="#projects-mob">Projects</a></li>
+                    <li><a href="#contact-mob">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Banner Section -->
-    <section id="banner" class="banner" aria-label="Hero Section">
-        <img src="img/banner-desk.png" alt="Banner image of Lais Amano" class="banner-img">
-        <img src="img/banner-mob.png" alt="Banner image of Lais Amano" class="banner-img-mob">
-        <canvas id="particles" aria-hidden="true"></canvas>
-        <div class="banner-content">
-            <h1 class="title-banner">Hello,</h1>
-            <h2 class="title-banner-b">I'm Lais</h2>
-            <p class="subtitle-banner">Web Design Student & Developer</p>
-            <div class="btn-group">
-                <a href="mailto:amano.lais90@gmail.com" class="btn" aria-label="Send Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
-                    </svg>
-                </a>
 
-                <a href="https://github.com/LaisAmano" target="_blank" rel="noopener" class="btn"
-                    aria-label="Visit GitHub profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                    </svg>
-                </a>
+    <!-- versão desktop -------------------------------------------------------- -->
+    <section class="desk-version">
+        <!-- Banner Section -->
+        <section id="banner" class="banner" aria-label="Hero Section">
+            <img src="img/banner-desk.png" alt="Banner image of Lais Amano" class="banner-img">
+            <img src="img/banner-mob.png" alt="Banner image of Lais Amano" class="banner-img-mob">
+            <canvas id="particles" aria-hidden="true"></canvas>
+            <div class="banner-content">
+                <h1 class="title-banner">Hello,</h1>
+                <h2 class="title-banner-b">I'm Lais</h2>
+                <p class="subtitle-banner">Web Design Student & Developer</p>
+                <div class="btn-group">
+                    <a href="mailto:amano.lais90@gmail.com" class="btn" aria-label="Send Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
+                        </svg>
+                    </a>
 
-                <a href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank" rel="noopener" class="btn"
-                    aria-label="Visit LinkedIn profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
-                    </svg>
-                </a>
+                    <a href="https://github.com/LaisAmano" target="_blank" rel="noopener" class="btn"
+                        aria-label="Visit GitHub profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank" rel="noopener"
+                        class="btn" aria-label="Visit LinkedIn profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- About Section -->
+            <section class="section-main" id="about">
+                <h2 class="content-title">About Me 👤</h2>
+                <p>Hello! I'm Lais Amano, a designer and web developer passionate about transforming ideas into unique
+                    digital experiences. I focus on creating projects that combine aesthetics, functionality, and
+                    innovation, always paying close attention to the user experience. Every challenge is an opportunity
+                    to
+                    learn, innovate, and deliver real results.</p>
+            </section>
+
+            <!-- Projects Section -->
+
+            <section class="section-main" id="projects">
+                <h2 class="content-title">Featured Projects ✨</h2>
+
+                <div class="project-info">
+                    <h3 class="project-title">Como que faz (TCC)</h3>
+                    <p class="project-subtitle">
+                        Como que faz?” is an interactive platform focused on cooking, wellness, and cleaning, allowing
+                        users
+                        to share tips and tutorials. Based on market research, it offers monetization strategies such as
+                        premium subscriptions and affiliate marketing, while emphasizing digital optimization and social
+                        media presence, providing practical utility and an enriching experience for users.
+                    </p>
+                    <br>
+                    <p style="text-decoration: underline;">Experimente clicar na imagem para visitar o repositório do
+                        projeto no GitHub!</p>
+                </div>
+
+                <a href="https://github.com/LaisAmano/Como_Que_Faz" target="_blank" rel="noopener">
+                    <div class="project-grid">
+                        <article class="project-card">
+                            <div class="principal-img">
+                                <img src="img/tcc.webp" alt="Main screenshot of Como que faz project"
+                                    class="project-img">
+                            </div>
+
+                            <div class="img-container">
+                                <div class="second-img">
+                                    <img src="img/tcc2.png" alt="Secondary screenshot of Como que faz project"
+                                        class="project-img">
+                                </div>
+                                <div class="third-img">
+                                    <img src="img/tcc4.webp" alt="Additional screenshot of Como que faz project"
+                                        class="project-img">
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </a>
+            </section>
+
+
+            <!-- Contact Section -->
+            <section class="section-main" id="contact">
+                <h2 class="content-title">Let's Talk 🚀</h2>
+                <p>Feel free to get in touch via email or connect on GitHub and LinkedIn.</p>
+                <div class="btn-group">
+                    <a class="btn-ft" href="mailto:amano.lais90@gmail.com" aria-label="Send Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
+                        </svg>
+                    </a>
+
+                    <a class="btn-ft" href="https://github.com/LaisAmano" target="_blank" rel="noopener"
+                        aria-label="Visit GitHub profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+
+                    <a class="btn-ft" href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank"
+                        rel="noopener" aria-label="Visit LinkedIn profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 - Developed by Lais Amano</p>
+        </footer>
     </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section class="section-main" id="about">
-            <h2 class="content-title">About Me 👤</h2>
-            <p>Hello! I'm Lais Amano, a designer and web developer passionate about transforming ideas into unique
-                digital experiences. I focus on creating projects that combine aesthetics, functionality, and
-                innovation, always paying close attention to the user experience. Every challenge is an opportunity to
-                learn, innovate, and deliver real results.</p>
-        </section>
 
-        <!-- Projects Section -->
+    <!-- versão mobile -------------------------------------------------------- -->
+    <section class="mob-version">
+        <!-- Banner Section -->
+        <section id="banner-mob" class="banner" aria-label="Hero Section">
+            <img src="img/banner-desk.png" alt="Banner image of Lais Amano" class="banner-img">
+            <img src="img/banner-mob.png" alt="Banner image of Lais Amano" class="banner-img-mob">
+            <canvas id="particles" aria-hidden="true"></canvas>
+            <div class="banner-content">
+                <h1 class="title-banner">Hello,</h1>
+                <h2 class="title-banner-b">I'm Lais</h2>
+                <p class="subtitle-banner">Web Design Student & Developer</p>
+                <div class="btn-group">
+                    <a href="mailto:amano.lais90@gmail.com" class="btn" aria-label="Send Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
+                        </svg>
+                    </a>
 
-        <section class="section-main" id="projects">
-            <h2 class="content-title">Featured Projects ✨</h2>
+                    <a href="https://github.com/LaisAmano" target="_blank" rel="noopener" class="btn"
+                        aria-label="Visit GitHub profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
 
-            <div class="project-info">
-                <h3 class="project-title">Como que faz (TCC)</h3>
-                <p class="project-subtitle">
-                    Como que faz?” is an interactive platform focused on cooking, wellness, and cleaning, allowing
-                    users
-                    to share tips and tutorials. Based on market research, it offers monetization strategies such as
-                    premium subscriptions and affiliate marketing, while emphasizing digital optimization and social
-                    media presence, providing practical utility and an enriching experience for users.
-                </p>
-                <br>
-                <p style="text-decoration: underline;">Experimente clicar na imagem para visitar o repositório do projeto no GitHub!</p>
-            </div>
-
-            <a href="https://github.com/LaisAmano/Como_Que_Faz" target="_blank" rel="noopener">
-                <div class="project-grid">
-                    <article class="project-card">
-                        <div class="principal-img">
-                            <img src="img/tcc.webp" alt="Main screenshot of Como que faz project" class="project-img">
-                        </div>
-
-                        <div class="img-container">
-                            <div class="second-img">
-                                <img src="img/tcc2.png" alt="Secondary screenshot of Como que faz project"
-                                    class="project-img">
-                            </div>
-                            <div class="third-img">
-                                <img src="img/tcc4.webp" alt="Additional screenshot of Como que faz project"
-                                    class="project-img">
-                            </div>
-                        </div>
-                    </article>
+                    <a href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank" rel="noopener"
+                        class="btn" aria-label="Visit LinkedIn profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
                 </div>
-            </a>
-        </section>
-
-
-        <!-- Contact Section -->
-        <section class="section-main" id="contact">
-            <h2 class="content-title">Let's Talk 🚀</h2>
-            <p>Feel free to get in touch via email or connect on GitHub and LinkedIn.</p>
-            <div class="btn-group">
-                <a class="btn-ft" href="mailto:amano.lais90@gmail.com" aria-label="Send Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
-                    </svg>
-                </a>
-
-                <a class="btn-ft" href="https://github.com/LaisAmano" target="_blank" rel="noopener"
-                    aria-label="Visit GitHub profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                    </svg>
-                </a>
-
-                <a class="btn-ft" href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank"
-                    rel="noopener" aria-label="Visit LinkedIn profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
-                    </svg>
-                </a>
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 - Developed by Lais Amano</p>
-    </footer>
+        <!-- Main Content -->
+        <main>
+            <!-- About Section -->
+            <section class="section-main" id="about-mob">
+                <h2 class="content-title">About Me 👤</h2>
+                <p class="content-p">Hello! I'm Lais Amano, a designer and web developer passionate about transforming
+                    ideas into unique
+                    digital experiences. I focus on creating projects that combine aesthetics, functionality, and
+                    innovation, always paying close attention to the user experience. Every challenge is an opportunity
+                    to
+                    learn, innovate, and deliver real results.</p>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="section-main" id="projects-mob">
+                <h2 class="content-title">Featured Projects ✨</h2>
+
+                <div class="project-info">
+                    <h3 class="project-title">Como que faz (TCC)</h3>
+                    <p class="project-subtitle">
+                        Como que faz?” is an interactive platform focused on cooking, wellness, and cleaning, allowing
+                        users to share tips and tutorials...
+                    </p>
+                    <br>
+                    <p class="content-p" style="text-decoration: underline;">Experimente arrastar as imagens para
+                        visualizar todas!</p>
+                </div>
+
+                <!-- Carrossel -->
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img class="carousel-item-1" src="img/tcc.webp" alt="Main screenshot of Como que faz project">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-item-2" src="img/tcc2.png"
+                            alt="Secondary screenshot of Como que faz project">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-item-3" src="img/tcc4.webp"
+                            alt="Additional screenshot of Como que faz project">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section-main" id="contact-mob">
+                <h2 class="content-title">Let's Talk 🚀</h2>
+                <p class="content-p">Feel free to get in touch via email or connect on GitHub and LinkedIn.</p>
+                <div class="btn-group">
+                    <a class="btn-ft" href="mailto:amano.lais90@gmail.com" aria-label="Send Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.234A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V5.383l-7.555 4.533a.5.5 0 0 1-.445 0L0 5.383z" />
+                        </svg>
+                    </a>
+
+                    <a class="btn-ft" href="https://github.com/LaisAmano" target="_blank" rel="noopener"
+                        aria-label="Visit GitHub profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0-2.48-.48-2.64-.92-.09-.23-.48-.92-.82-1.11-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+
+                    <a class="btn-ft" href="https://www.linkedin.com/in/lais-amano-30b788306/" target="_blank"
+                        rel="noopener" aria-label="Visit LinkedIn profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.246-.015-.708-.521-1.247-1.344-1.247-.823 0-1.358.539-1.358 1.247 0 .692.521 1.246 1.329 1.246h.015zm4.908 8.21V9.359c0-.215.016-.429.08-.582.176-.429.577-.874 1.25-.874.881 0 1.232.658 1.232 1.623v4.028h2.4V9.187c0-2.22-1.182-3.252-2.761-3.252-1.28 0-1.845.711-2.165 1.213v.026h-.016a5.13 5.13 0 0 1 .016-.026V6.169h-2.4c.03.698 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 - Developed by Lais Amano</p>
+        </footer>
+    </section>
 
     <script src="js/script.js"></script>
 
