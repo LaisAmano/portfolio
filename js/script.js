@@ -1,60 +1,49 @@
+// ===== Função para criar partículas em qualquer canvas =====
+function startParticles(canvasId, num = 80) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
 
-// Partículas
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
+  let particles = [];
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particlesArray = [];
-const numberOfParticles = 80;
-
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.speedX = Math.random() * 1 - 0.5;
-    this.speedY = Math.random() * 1 - 0.5;
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    particles = Array.from({ length: num }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2 + 1,
+      dx: Math.random() - 0.5,
+      dy: Math.random() - 0.5
+    }));
   }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += p.dx;
+      p.y += p.dy;
+
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(255,255,255,0.7)";
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
   }
-  draw() {
-    ctx.fillStyle = "rgba(255,255,255,0.7)";
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
+
+  resize();
+  draw();
+  window.addEventListener("resize", resize);
 }
 
-function init() {
-  particlesArray.length = 0;
-  for (let i = 0; i < numberOfParticles; i++) {
-    particlesArray.push(new Particle());
-  }
-}
+// ===== Inicializa para desktop e mobile =====
+startParticles("particles-desk", 100); // desktop
+startParticles("particles-mob", 60);   // mobile
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particlesArray.forEach(p => {
-    p.update();
-    p.draw();
-  });
-  requestAnimationFrame(animate);
-}
-
-init();
-animate();
-
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  init();
-});
 
 // Menu transparente / sólido
 const menu = document.getElementById("menu");
@@ -113,3 +102,32 @@ if (carousel) {
     carousel.scrollLeft = scrollLeft - walk;
   });
 }
+
+// Script simples para rolar até a seção correta (desktop ou mobile)
+document.querySelectorAll('#menu a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); // Evita pular direto
+
+    // Pega o ID base (ex: "about")
+    const baseId = this.getAttribute('href').substring(1);
+
+    // Se a tela for pequena, tenta o "-mob"
+    const isMobile = window.innerWidth <= 768;
+    const targetId = isMobile ? baseId + '-mob' : baseId;
+
+    // Procura a seção
+    const section = document.getElementById(targetId);
+
+    // Se achou, rola suavemente até lá
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Fecha o menu mobile (se existir)
+    const menuLinks = document.querySelector('.menu-links');
+    if (menuLinks) {
+      menuLinks.classList.remove('open');
+    }
+  });
+});
+

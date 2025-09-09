@@ -1,0 +1,136 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.banner-project {
+    position: relative;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.title-banner-project{
+    font-size: 2rem;
+    color: #0af;
+    margin-bottom: 1rem;
+}
+
+.subtitle-banner-project p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.project-article {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-article:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 170, 255, 0.1);
+}
+
+.project-article h2 {
+    color: #0af;
+    margin-bottom: 1rem;
+}
+
+.project-article p {
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #08c;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #08c;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Efeito imersivo com partículas */
+#particles-project {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    article h2 {
+        font-size: 1.2rem;
+    }
+
+    article p {
+        font-size: 0.9rem;
+    }
+}
