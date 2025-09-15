@@ -21,8 +21,3 @@ Aqui você encontra meus principais projetos, experiências e estudos em **Web D
 - Rolagem suave entre seções  
 - Seções dedicadas a **sobre mim**, **projetos** e **contato**  
 
----
-
-## 📬 Contato
-- 💼 [LinkedIn](https://linkedin.com/in/laisamano)  
-- 📧 lais@example.com
